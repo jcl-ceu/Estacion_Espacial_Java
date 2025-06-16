@@ -1,4 +1,4 @@
-</details> <details> <summary><code>Ingeniero.java</code></summary>
+<details> <summary><code>Ingeniero.java</code></summary>
 package com.estacionespacial.model.tripulacion;
 
 public class Ingeniero extends Tripulante {
@@ -30,3 +30,4 @@ public class Ingeniero extends Tripulante {
         return super.toCSV() + ";" + especialidad;
     }
 }
+</details>
