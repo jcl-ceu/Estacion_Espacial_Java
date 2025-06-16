@@ -1,4 +1,4 @@
-</details> <details> <summary><code>Comandante.java</code></summary>
+<details> <summary><code>Comandante.java</code></summary>
 package com.estacionespacial.model.tripulacion;
 
 public class Comandante extends Tripulante {
@@ -30,3 +30,4 @@ public class Comandante extends Tripulante {
         return super.toCSV() + ";" + rango;
     }
 }
+</details>
