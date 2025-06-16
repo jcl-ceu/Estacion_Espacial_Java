@@ -6,3 +6,4 @@ public class DatoInvalidoException extends Exception {
         super(mensaje);
     }
 }
+</details>
