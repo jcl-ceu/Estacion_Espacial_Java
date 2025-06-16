@@ -1,4 +1,4 @@
-</details> <details> <summary><code>Medico.java</code></summary>
+<details> <summary><code>Medico.java</code></summary>
 package com.estacionespacial.model.tripulacion;
 
 public class Medico extends Tripulante {
