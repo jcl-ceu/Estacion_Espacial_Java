@@ -1,4 +1,3 @@
-<details> <summary><code>RecursoVital.java</code></summary>
 package com.estacionespacial.model.recurso;
 
 import com.estacionespacial.exceptions.RecursoInsuficienteException;
@@ -48,4 +47,3 @@ public class RecursoVital {
         return line.split(";");
     }
 }
-</details>
