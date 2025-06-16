@@ -1,0 +1,25 @@
+<details> <summary><code>DatoInvalidoException.java</code></summary>
+package com.estacionespacial.exceptions;
+
+public class DatoInvalidoException extends Exception {
+    public DatoInvalidoException(String mensaje) {
+        super(mensaje);
+    }
+}
+</details> <details> <summary><code>RecursoInsuficienteException.java</code></summary>
+package com.estacionespacial.exceptions;
+
+public class RecursoInsuficienteException extends Exception {
+    public RecursoInsuficienteException(String mensaje) {
+        super(mensaje);
+    }
+}
+</details> <details> <summary><code>ModuloInoperativoException.java</code></summary>
+package com.estacionespacial.exceptions;
+
+public class ModuloInoperativoException extends Exception {
+    public ModuloInoperativoException(String mensaje) {
+        super(mensaje);
+    }
+}
+</details>
