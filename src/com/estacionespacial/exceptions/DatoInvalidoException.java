@@ -1,4 +1,3 @@
-<details> <summary><code>DatoInvalidoException.java</code></summary>
 package com.estacionespacial.exceptions;
 
 public class DatoInvalidoException extends Exception {
@@ -6,4 +5,3 @@ public class DatoInvalidoException extends Exception {
         super(mensaje);
     }
 }
-</details>
