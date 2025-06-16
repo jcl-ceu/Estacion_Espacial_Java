@@ -1,4 +1,3 @@
-<details> <summary><code>Mision.java</code></summary>
 package com.estacionespacial.model.mision;
 
 import com.estacionespacial.model.tripulacion.Tripulante;
@@ -57,4 +56,3 @@ public class Mision {
         return line.split(";");
     }
 }
-</details>
