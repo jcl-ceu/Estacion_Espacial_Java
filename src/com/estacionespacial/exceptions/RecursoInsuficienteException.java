@@ -1,4 +1,4 @@
-</details> <details> <summary><code>RecursoInsuficienteException.java</code></summary>
+<details> <summary><code>RecursoInsuficienteException.java</code></summary>
 package com.estacionespacial.exceptions;
 
 public class RecursoInsuficienteException extends Exception {
@@ -6,3 +6,4 @@ public class RecursoInsuficienteException extends Exception {
         super(mensaje);
     }
 }
+</details>
