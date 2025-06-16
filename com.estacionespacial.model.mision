@@ -27,7 +27,6 @@ public class Mision {
         this(UUID.randomUUID().toString(), descripcion, inicio, fin, false);
     }
 
-    // getters...
 
     public void añadirTripulante(Tripulante t) {
         participantes.add(t);
@@ -46,7 +45,6 @@ public class Mision {
             idMision, descripcion, getEstado(), getDuracionDias());
     }
 
-    // CSV
     public String toCSV() {
         String base = String.join(";", idMision, descripcion,
             fechaInicio.format(FMT), fechaFin.format(FMT),
