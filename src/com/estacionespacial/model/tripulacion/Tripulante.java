@@ -1,4 +1,3 @@
-<details> <summary><code>Tripulante.java</code></summary>
 package com.estacionespacial.model.tripulacion;
 
 public abstract class Tripulante {
@@ -40,4 +39,3 @@ public abstract class Tripulante {
         return line.split(";");
     }
 }
-</details>
