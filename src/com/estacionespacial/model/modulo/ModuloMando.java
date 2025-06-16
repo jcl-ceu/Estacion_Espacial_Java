@@ -1,4 +1,3 @@
-<details> <summary><code>ModuloMando.java</code></summary>
 package com.estacionespacial.model.modulo;
 
 public class ModuloMando extends Modulo {
@@ -22,4 +21,3 @@ public class ModuloMando extends Modulo {
                            String.valueOf(tieneIA));
     }
 }
-</details>
