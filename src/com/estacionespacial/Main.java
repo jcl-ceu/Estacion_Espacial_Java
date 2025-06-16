@@ -1,4 +1,3 @@
-<details> <summary><code>Main.java</code></summary>
 package com.estacionespacial;
 
 public class Main {
@@ -9,4 +8,3 @@ public class Main {
         sistema.guardarDatos();
     }
 }
-</details>
