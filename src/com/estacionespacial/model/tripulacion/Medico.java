@@ -1,4 +1,3 @@
-<details> <summary><code>Medico.java</code></summary>
 package com.estacionespacial.model.tripulacion;
 
 public class Medico extends Tripulante {
@@ -30,4 +29,3 @@ public class Medico extends Tripulante {
         return super.toCSV() + ";" + pacientesAtendidos;
     }
 }
-</details>
