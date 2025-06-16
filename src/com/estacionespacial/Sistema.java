@@ -484,7 +484,7 @@ public class Sistema {
 
         System.out.println("\nMisiones finalizadas:");
         misiones.stream()
-            .filter(M -> M.isFinalizada())
+            .filter(m -> m.isFinalizada())
             .forEach(m -> System.out.println(m.getInfo()));
 
         // Consumo acumulado de recursos (estimado)
