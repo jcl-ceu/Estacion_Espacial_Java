@@ -39,7 +39,6 @@ public class RecursoVital {
             alertaBajoStock() ? " [ALERTA]" : "");
     }
 
-    // CSV
     public String toCSV() {
         return String.join(";", tipo,
             String.valueOf(cantidadDisponible),
