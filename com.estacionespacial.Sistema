@@ -1,0 +1,54 @@
+<details> <summary><code>Sistema.java</code></summary>
+package com.estacionespacial;
+
+import com.estacionespacial.exceptions.*;
+import com.estacionespacial.model.tripulacion.*;
+import com.estacionespacial.model.modulo.*;
+import com.estacionespacial.model.mision.Mision;
+import com.estacionespacial.model.recurso.RecursoVital;
+import com.estacionespacial.persistence.CSVHandler;
+import com.estacionespacial.utils.Utils;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.*;
+
+public class Sistema {
+    private List<Tripulante> tripulantes = new ArrayList<>();
+    private List<Modulo> modulos         = new ArrayList<>();
+    private List<Mision> misiones       = new ArrayList<>();
+    private List<RecursoVital> recursos = new ArrayList<>();
+
+    private static final String PATH_TRIP = "tripulantes.csv";
+    private static final String PATH_MOD  = "modulos.csv";
+    private static final String PATH_MIS  = "misiones.csv";
+    private static final String PATH_REC  = "recursos.csv";
+
+    public void cargarDatos() { /*… implementación de leer CSV y poblar listas …*/ }
+    public void guardarDatos() {/*… implementación de escribir CSV desde listas …*/}
+
+    public void mostrarMenu() {
+        int opt;
+        do {
+            System.out.println("=== SISTEMA ESTACIÓN ESPACIAL ===");
+            System.out.println("1. Gestionar tripulación");
+            System.out.println("2. Gestionar módulos");
+            System.out.println("3. Gestionar misiones");
+            System.out.println("4. Controlar recursos");
+            System.out.println("5. Generar informes");
+            System.out.println("6. Guardar y salir");
+            opt = Utils.leerEntero("Seleccione opción: ");
+            switch (opt) {
+                case 1: menuTripulacion(); break;
+                case 2: menuModulos();    break;
+                case 3: menuMisiones();   break;
+                case 4: menuRecursos();   break;
+                case 5: generarInformes();break;
+                case 6: System.out.println("Guardando y saliendo…"); break;
+                default: System.out.println("Opción inválida");
+            }
+        } while (opt != 6);
+    }
+
+}
+</details>
