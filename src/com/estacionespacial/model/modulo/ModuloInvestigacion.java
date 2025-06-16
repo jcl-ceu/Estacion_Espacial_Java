@@ -1,4 +1,3 @@
-<details> <summary><code>ModuloInvestigacion.java</code></summary>
 package com.estacionespacial.model.modulo;
 
 public class ModuloInvestigacion extends Modulo {
@@ -26,4 +25,3 @@ public class ModuloInvestigacion extends Modulo {
                            campo);
     }
 }
-</details>
