@@ -26,6 +26,13 @@ public class Mision {
         this(UUID.randomUUID().toString(), descripcion, inicio, fin, false);
     }
 
+    public String getIdMision() {
+        return idMision;
+    }
+
+    public boolean isFinalizada() {
+        return finalizada;
+    }
 
     public void añadirTripulante(Tripulante t) {
         participantes.add(t);
