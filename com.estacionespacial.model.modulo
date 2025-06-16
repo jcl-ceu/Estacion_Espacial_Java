@@ -13,7 +13,6 @@ public abstract class Modulo {
         this.operativo = operativo;
     }
 
-    // getters y setters
     public String getCodigo() { return codigo; }
     public String getNombre() { return nombre; }
     public int getCapacidad() { return capacidad; }
