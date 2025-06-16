@@ -40,3 +40,4 @@ public abstract class Tripulante {
         return line.split(";");
     }
 }
+</details>
