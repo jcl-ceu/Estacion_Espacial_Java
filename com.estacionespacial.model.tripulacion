@@ -33,7 +33,6 @@ public abstract class Tripulante {
     }
     public void descansar() { this.horasTrabajo = 0; }
 
-    // CSV
     public String toCSV() {
         return String.join(";", id, nombre, rol, String.valueOf(horasTrabajo));
     }
