@@ -1,4 +1,3 @@
-<details> <summary><code>ModuloHabitacional.java</code></summary>
 package com.estacionespacial.model.modulo;
 
 public class ModuloHabitacional extends Modulo {
@@ -25,4 +24,3 @@ public class ModuloHabitacional extends Modulo {
                            String.valueOf(camas));
     }
 }
-</details>
