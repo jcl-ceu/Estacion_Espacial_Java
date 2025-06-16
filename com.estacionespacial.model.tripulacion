@@ -1,0 +1,140 @@
+<details> <summary><code>Tripulante.java</code></summary>
+package com.estacionespacial.model.tripulacion;
+
+public abstract class Tripulante {
+    private String id, nombre, rol;
+    private double horasTrabajo;
+
+    public Tripulante(String id, String nombre, String rol) {
+        this.id = id; this.nombre = nombre; this.rol = rol;
+        this.horasTrabajo = 0;
+    }
+
+    // getters y setters con validaciones
+    public String getId() { return id; }
+    public String getNombre() { return nombre; }
+    public String getRol() { return rol; }
+    public double getHorasTrabajo() { return horasTrabajo; }
+
+    public void setNombre(String nombre) {
+        if (nombre == null || nombre.isBlank()) throw new IllegalArgumentException("Nombre inválido");
+        this.nombre = nombre;
+    }
+    public void setRol(String rol) {
+        if (rol == null || rol.isBlank()) throw new IllegalArgumentException("Rol inválido");
+        this.rol = rol;
+    }
+
+    public abstract String getInfoCompleta();
+
+    public void trabajar(double horas) {
+        if (horas <= 0) throw new IllegalArgumentException("Horas deben ser positivas");
+        this.horasTrabajo += horas;
+    }
+    public void descansar() { this.horasTrabajo = 0; }
+
+    // CSV
+    public String toCSV() {
+        return String.join(";", id, nombre, rol, String.valueOf(horasTrabajo));
+    }
+    public static String[] fromCSV(String line) {
+        return line.split(";");
+    }
+}
+</details> <details> <summary><code>Comandante.java</code></summary>
+package com.estacionespacial.model.tripulacion;
+
+public class Comandante extends Tripulante {
+    private String rango;
+
+    public Comandante(String id, String nombre, String rango, double horas) {
+        super(id, nombre, "Comandante");
+        this.rango = rango;
+        trabajar(horas);
+    }
+    public Comandante(String id, String nombre, String rango) {
+        this(id, nombre, rango, 0);
+    }
+
+    public String getRango() { return rango; }
+    public void setRango(String rango) {
+        if (rango == null || rango.isBlank()) throw new IllegalArgumentException("Rango inválido");
+        this.rango = rango;
+    }
+
+    @Override
+    public String getInfoCompleta() {
+        return String.format("ID:%s, Nombre:%s, Rol:%s, Rango:%s, Horas:%.2f",
+            getId(), getNombre(), getRol(), rango, getHorasTrabajo());
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ";" + rango;
+    }
+}
+</details> <details> <summary><code>Ingeniero.java</code></summary>
+package com.estacionespacial.model.tripulacion;
+
+public class Ingeniero extends Tripulante {
+    private String especialidad;
+
+    public Ingeniero(String id, String nombre, String especialidad, double horas) {
+        super(id, nombre, "Ingeniero");
+        this.especialidad = especialidad;
+        trabajar(horas);
+    }
+    public Ingeniero(String id, String nombre, String especialidad) {
+        this(id, nombre, especialidad, 0);
+    }
+
+    public String getEspecialidad() { return especialidad; }
+    public void setEspecialidad(String esp) {
+        if (esp == null || esp.isBlank()) throw new IllegalArgumentException("Especialidad inválida");
+        this.especialidad = esp;
+    }
+
+    @Override
+    public String getInfoCompleta() {
+        return String.format("ID:%s, Nombre:%s, Rol:%s, Especialidad:%s, Horas:%.2f",
+            getId(), getNombre(), getRol(), especialidad, getHorasTrabajo());
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ";" + especialidad;
+    }
+}
+</details> <details> <summary><code>Medico.java</code></summary>
+package com.estacionespacial.model.tripulacion;
+
+public class Medico extends Tripulante {
+    private int pacientesAtendidos;
+
+    public Medico(String id, String nombre, int pacientesAtendidos, double horas) {
+        super(id, nombre, "Médico");
+        this.pacientesAtendidos = pacientesAtendidos;
+        trabajar(horas);
+    }
+    public Medico(String id, String nombre, int pacientesAtendidos) {
+        this(id, nombre, pacientesAtendidos, 0);
+    }
+
+    public int getPacientesAtendidos() { return pacientesAtendidos; }
+    public void setPacientesAtendidos(int n) {
+        if (n < 0) throw new IllegalArgumentException("Pacientes atendidos inválido");
+        this.pacientesAtendidos = n;
+    }
+
+    @Override
+    public String getInfoCompleta() {
+        return String.format("ID:%s, Nombre:%s, Rol:%s, Pacientes:%d, Horas:%.2f",
+            getId(), getNombre(), getRol(), pacientesAtendidos, getHorasTrabajo());
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ";" + pacientesAtendidos;
+    }
+}
+</details>
