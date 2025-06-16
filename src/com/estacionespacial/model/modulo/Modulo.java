@@ -1,4 +1,3 @@
-<details> <summary><code>Modulo.java</code></summary>
 package com.estacionespacial.model.modulo;
 
 public abstract class Modulo {
@@ -31,4 +30,3 @@ public abstract class Modulo {
     public abstract String getTipo();
     public abstract String toCSV();
 }
-</details>
