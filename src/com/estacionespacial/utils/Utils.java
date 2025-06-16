@@ -1,4 +1,3 @@
-<details> <summary><code>Utils.java</code></summary>
 package com.estacionespacial.utils;
 
 import java.time.LocalDate;
@@ -50,4 +49,3 @@ public class Utils {
         sc.nextLine();
     }
 }
-</details>
