@@ -1,4 +1,3 @@
-<details> <summary><code>CSVHandler.java</code></summary>
 package com.estacionespacial.persistence;
 
 import java.io.*;
@@ -29,4 +28,3 @@ public class CSVHandler {
         }
     }
 }
-</details>
